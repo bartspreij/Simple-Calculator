@@ -1,13 +1,10 @@
 package dev.goochem;
 
-/**
- * Hello world!
- *
- */
-public class SimpleCalculatorApp
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+import dev.goochem.swingui.CalculatorUI;
+
+public class SimpleCalculatorApp {
+
+    public static void main( String[] args ) {
+        CalculatorUI UI = new CalculatorUI();
     }
 }
