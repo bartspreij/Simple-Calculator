@@ -1,17 +1,17 @@
-package dev.goochem.arithmetic;
+package dev.goochem.model;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class CalculatorTest {
+public class CalculatorModelTest {
 
-    private Calculator calculator;
+    private CalculatorModel calculator;
 
     @BeforeEach
     public void setUp() {
-        calculator = new Calculator();
+        calculator = new CalculatorModel();
     }
 
     @Test

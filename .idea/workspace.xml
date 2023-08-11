@@ -4,7 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb145a75-94b0-4aed-bd02-24305f267dce" name="Changes" comment="" />
+    <list default="true" id="fb145a75-94b0-4aed-bd02-24305f267dce" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simplecalculator.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/goochem/controller/CalculatorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/goochem/view/CalculatorUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/goochem/SimpleCalculatorApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/goochem/SimpleCalculatorApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/goochem/arithmetic/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/goochem/model/CalculatorModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/goochem/swingui/CalculatorButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/goochem/view/CalculatorButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/goochem/swingui/CalculatorUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dev/goochem/arithmetic/CalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dev/goochem/model/CalculatorModelTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/goochem/SimpleCalculatorApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/goochem/SimpleCalculatorApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/goochem/arithmetic/Calculator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/goochem/swingui/CalculatorButton.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/goochem/swingui/CalculatorUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/dev/goochem/arithmetic/CalculatorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/dev/goochem/arithmetic/CalculatorTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/dev/goochem/swingui/CalculatorFrameTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/dev/goochem/swingui/CalculatorFrameTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/dev/goochem/swingui/CalculatorPanelTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/dev/goochem/swingui/CalculatorPanelTest.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +33,11 @@
   </component>
   <component name="CompilerWorkspaceConfiguration">
     <option name="CLEAR_OUTPUT_DIRECTORY" value="false" />
+  </component>
+  <component name="DarkyenusTimeTracker">
+    <option name="totalTimeSeconds" value="14398" />
+    <option name="gitIntegration" value="true" />
+    <option name="naggedAbout" value="1" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -21,10 +47,20 @@
       </list>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="FindBugs-IDEA-Workspace">
+    <analyzeAfterCompile>true</analyzeAfterCompile>
+    <toolWindowToFront>false</toolWindowToFront>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2TmwlX6hVDWBKoDUFpzckylFEYm" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="abbreviatePackageNames" value="true" />
     <option name="autoscrollFromSource" value="true" />
@@ -37,17 +73,52 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Development/Projects/simplecalculator",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+  <component name="RunManager" selected="Application.SimpleCalculatorApp">
+    <configuration name="SimpleCalculatorApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="dev.goochem.SimpleCalculatorApp" />
+      <module name="simplecalculator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dev.goochem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <module name="simplecalculator" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalculatorModelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="simplecalculator" />
+      <option name="PACKAGE_NAME" value="dev.goochem.model" />
+      <option name="MAIN_CLASS_NAME" value="dev.goochem.model.CalculatorModelTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -59,6 +130,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SimpleCalculatorApp" />
+        <item itemvalue="JUnit.CalculatorModelTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fb145a75-94b0-4aed-bd02-24305f267dce" name="Changes" comment="" />
+      <created>1691744639648</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1691744639648</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/dev/goochem/view/CalculatorUI.java</url>
+          <line>128</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
 </project>

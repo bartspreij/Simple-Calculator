@@ -11,10 +11,6 @@
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="FindBugs-IDEA-Workspace">
-    <analyzeAfterCompile>true</analyzeAfterCompile>
-    <toolWindowToFront>false</toolWindowToFront>
-  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
@@ -22,7 +18,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="11" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="17" project-jdk-type="JavaSDK" />
   <component name="SaveActionSettings">
     <option name="actions">
       <set>

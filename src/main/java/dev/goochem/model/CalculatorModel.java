@@ -1,6 +1,6 @@
-package dev.goochem.arithmetic;
+package dev.goochem.model;
 
-public class Calculator {
+public class CalculatorModel {
 
     public int add(int first, int second) {
         return first + second;
