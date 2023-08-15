@@ -12,15 +12,14 @@ import java.util.Objects;
 import java.util.Set;
 
 public class CalculatorUI extends JFrame {
-    private final CalculatorController controller;
     private final JPanel centerPanel, northPanel, eastPanel;
+    private final JTextField inputField = new JTextField();
     private static final Color BLUE_BACKGROUND_COLOR = new Color(0x123456);
     private static final Color GRAY_BACKGROUND_COLOR = new Color(105, 105, 105, 200); // R, G, B, Alpha
-    private static final Font myFont = new Font("Ink Free", Font.BOLD, 30);
-    private static final Set<Character> ALLOWED_CHARS = new HashSet<>();
+    private static final Font myFont = new Font("Consolas", Font.ITALIC, 30);
+    public static final Set<CalculatorButton> DISPLAYABLE_BUTTONS = new HashSet<>();
 
     public CalculatorUI() {
-        this.controller = new CalculatorController();
         this.centerPanel = new JPanel(new GridLayout(4, 5, 2, 2));
         this.northPanel = new JPanel(new BorderLayout());
         this.eastPanel = new JPanel(new BorderLayout());
@@ -28,6 +27,7 @@ public class CalculatorUI extends JFrame {
         loadPanels();
         loadLogo();
         loadFrame();
+        inputField.requestFocus(); // keep the focus on the inputField to always be able to type our input
     }
 
     // Loads the frame which we use to build upon
@@ -57,19 +57,14 @@ public class CalculatorUI extends JFrame {
     private void loadCenterPanel() {
         applyCommonPanelStyles(centerPanel);
         initializeButtons();
-        add(centerPanel); // add to frame
     }
 
     // Load the northPanel aka the "screen"
     private void loadNorthPanel() {
         applyCommonPanelStyles(northPanel);
         northPanel.setBorder(BorderFactory.createLoweredBevelBorder());
-
-        JTextField inputField = new JTextField();
         loadInputArea(inputField);
-
         northPanel.add(inputField);
-        add(northPanel); // add to frame
     }
 
     // Load the eastPanel which shows calculations history
@@ -84,7 +79,7 @@ public class CalculatorUI extends JFrame {
         loadResultArea(resultArea);
 
         eastPanel.add(resultArea);
-        add(eastPanel); // add to frame
+
     }
 
     // Apply common panel styles
@@ -96,15 +91,33 @@ public class CalculatorUI extends JFrame {
     // Initializes the buttons and adds an event listener to them for the center panel
     private void initializeButtons() {
         for (CalculatorButton btn : CalculatorButton.values()) {
-            if (btn.getLabel().length() == 1) {
-                ALLOWED_CHARS.add(btn.getLabel().charAt(0));
+            if (btn.getLabel().length() == 1) { // Add operators and digits to a Set<CalculatorButton>
+                DISPLAYABLE_BUTTONS.add(btn);
             }
 
             JButton semiTransparentButton = new JButton(btn.getLabel());
             semiTransparentButton.setBackground(GRAY_BACKGROUND_COLOR);
-            semiTransparentButton.addActionListener(e -> controller.handleButtonClick(btn));
+            semiTransparentButton.addActionListener(e -> {
+                controller.handleButtonPress(btn);
+            });
             centerPanel.add(semiTransparentButton);
         }
+    }
+
+    public void updateInputField(CalculatorButton btn) {
+        String currentText = inputField.getText();
+        char buttonChar = btn.getLabel().charAt(0); // button to char
+        char lastInputtedChar = 0;
+
+        if (currentText.length() > 1) {
+            lastInputtedChar = currentText.charAt(currentText.length() - 1);
+        }
+
+        if (Character.isDigit(buttonChar) || Character.isDigit(lastInputtedChar)) { // we update when btn is a digit or when last input was not an operator or dot
+            inputField.setText(inputField.getText() + btn.getLabel());
+        }
+
+        inputField.requestFocus(); // reset focus for better typing experience
     }
 
     // sets logoIcon, or null if the path was not found.
@@ -117,21 +130,21 @@ public class CalculatorUI extends JFrame {
     // Loads everything for the result area
     private void loadResultArea(JTextArea resultArea) {
         resultArea.setBackground(GRAY_BACKGROUND_COLOR);
+        resultArea.setEditable(false);
 
     }
 
     // Loads everything for the input area
     private void loadInputArea(JTextField inputField) {
         inputField.setBackground(GRAY_BACKGROUND_COLOR);
+        inputField.setCaretColor(GRAY_BACKGROUND_COLOR); // make cursor invisible
         inputField.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
         inputField.setFont(myFont);
-
-        // TODO: Fix this
         inputField.addKeyListener(new KeyAdapter() {
             @Override
-            public void keyPressed(KeyEvent key) {
-                if (!ALLOWED_CHARS.contains(key.getKeyChar())) {
-                    key.consume();
+            public void keyTyped(KeyEvent e) {
+                if(DISPLAYABLE_BUTTONS.stream().anyMatch(button -> button.getLabel().charAt(0) == e.getKeyChar())) {
+                    e.consume();
                 }
             }
         });
