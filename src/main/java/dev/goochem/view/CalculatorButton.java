@@ -18,8 +18,8 @@ public enum CalculatorButton {
     SUBTRACT("-"),
     ZERO("0"),
     DOT("."),
-    EXP("EXP"),
-    ANS("Ans"),
+    EXP("€"),
+    ANS("%"),
     EQUALS("=");
 
     private final String label;

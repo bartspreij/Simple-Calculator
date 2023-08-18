@@ -1,4 +1,4 @@
-package dev.goochem.swingui;
+package dev.goochem.view;
 
 public class CalculatorPanelTest {
 
