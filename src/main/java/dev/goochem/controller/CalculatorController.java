@@ -1,6 +1,8 @@
 package dev.goochem.controller;
 
 import dev.goochem.model.CalculatorModel;
+import dev.goochem.model.Operator;
+import dev.goochem.view.CalculatorButton;
 import dev.goochem.view.CalculatorView;
 
 import java.awt.event.ActionEvent;
@@ -27,18 +29,41 @@ public class CalculatorController {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            String expression = view.getExpression();
-            List<String> RPN = shuntingYard(tokenizeExpression(expression)); // Expression -> tokens -> Reverse Polish Notation
-            if (RPN.size() < 3) { // Need minimum of 3 tokens to calculate anything
-                return;
-            }
-            model.evaluateExpression(RPN);
-            view.setCalcSolution(model.getCalculationValue());
-            view.setDisplayingResult(true);
+            CalculatorButton button = (CalculatorButton) e.getSource();
+            handleButtonPress(button);
         }
     }
 
-    public List<String> tokenizeExpression(String expression) {
+    public void handleButtonPress(CalculatorButton btn) {
+            switch (btn) {
+                case EQUALS -> handleEqualsPress();
+                case AC -> handleAllClearPress();
+                case DELETE -> handleDeletePress();
+            }
+    }
+
+    private void handleEqualsPress() {
+        String expression = view.getExpression();
+        List<String> RPN = shuntingYard(tokenizeExpression(expression)); // Expression -> tokens -> Reverse Polish Notation
+
+        if (RPN.size() < 3) { // Need minimum of 3 tokens to calculate anything
+            return;
+        }
+
+        model.evaluateExpression(RPN);
+        view.setCalcSolution(model.getCalculationValue());
+        view.setDisplayingResult(true);
+    }
+
+    private void handleAllClearPress() {
+
+    }
+
+    private void handleDeletePress () {
+
+    }
+
+    private List<String> tokenizeExpression(String expression) {
         List<String> tokens = new ArrayList<>();
         String regex = "\\d+|[\\-+*/]";
         Pattern pattern = Pattern.compile(regex);
@@ -48,5 +73,14 @@ public class CalculatorController {
             tokens.add(matcher.group());
         }
         return tokens;
+    }
+
+    private boolean isOperator(char input) {
+        for (Operator operator : Operator.values()) {
+            if (operator.getSymbol() == input) {
+                return true;
+            }
+        }
+        return false;
     }
 }

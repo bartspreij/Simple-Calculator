@@ -5,30 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb145a75-94b0-4aed-bd02-24305f267dce" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/goochem/model/Operator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/goochem/model/ShuntingYard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/dev/goochem/controller/CalculatorControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/dev/goochem/model/ShuntingYardTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/goochem/SimpleCalculatorApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/goochem/SimpleCalculatorApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/goochem/controller/CalculatorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/goochem/controller/CalculatorController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/goochem/model/CalculatorModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/goochem/model/CalculatorModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/goochem/model/Operator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/goochem/model/Operator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/goochem/view/CalculatorButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/goochem/view/CalculatorButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/goochem/view/CalculatorUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/goochem/view/CalculatorView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dev/goochem/model/CalculatorModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dev/goochem/model/CalculatorModelTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dev/goochem/swingui/CalculatorFrameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dev/goochem/view/CalculatorFrameTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dev/goochem/swingui/CalculatorPanelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dev/goochem/view/CalculatorPanelTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/goochem/SimpleCalculatorApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/goochem/SimpleCalculatorApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/goochem/controller/CalculatorController$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/goochem/controller/CalculatorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/goochem/controller/CalculatorController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/goochem/model/CalculatorModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/goochem/model/CalculatorModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/goochem/view/CalculatorButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/goochem/view/CalculatorButton.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/goochem/view/CalculatorUI$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/goochem/view/CalculatorUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/dev/goochem/arithmetic/CalculatorTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/dev/goochem/swingui/CalculatorFrameTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/dev/goochem/swingui/CalculatorFrameTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/dev/goochem/swingui/CalculatorPanelTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/dev/goochem/swingui/CalculatorPanelTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/goochem/view/CalculatorView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/goochem/view/CalculatorView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +21,7 @@
     <option name="CLEAR_OUTPUT_DIRECTORY" value="false" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="56020" />
+    <option name="totalTimeSeconds" value="64982" />
     <option name="gitIntegration" value="true" />
     <option name="naggedAbout" value="1" />
   </component>
@@ -73,26 +55,25 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showModules" value="false" />
     <option name="sortByType" value="true" />
-    <option name="sortKey" value="BY_TYPE" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Development/Projects/simplecalculator",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editor.preferences.import"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Development/Projects/simplecalculator&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.import&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="dev.goochem.model" />

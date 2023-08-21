@@ -1,35 +1,42 @@
 package dev.goochem.view;
 
+import javax.swing.*;
+import java.awt.event.ActionListener;
+
 public enum CalculatorButton {
-    SEVEN("7"),
-    EIGHT("8"),
-    NINE("9"),
-    DELETE("DEL"),
-    AC("AC"),
-    FOUR("4"),
-    FIVE("5"),
-    SIX("6"),
-    MULTIPLY("*"),
-    DIVIDE("/"),
-    ONE("1"),
-    TWO("2"),
-    THREE("3"),
-    ADD("+"),
-    SUBTRACT("-"),
-    ZERO("0"),
-    DOT("."),
-    EXP("€"),
-    ANS("%"),
-    EQUALS("=");
+    SEVEN('7'),
+    EIGHT('8'),
+    NINE('9'),
+    DELETE('\b'),
+    AC('C'),
+    FOUR('4'),
+    FIVE('5'),
+    SIX('6'),
+    MULTIPLY('*'),
+    DIVIDE('/'),
+    ONE('1'),
+    TWO('2'),
+    THREE('3'),
+    ADD('+'),
+    SUBTRACT('-'),
+    ZERO('0'),
+    DOT('.'),
+    EXP('X'),
+    ANS('A'),
+    EQUALS('=');
 
-    private final String label;
+    private final JButton button;
 
-    CalculatorButton(String label) {
-        this.label = label;
+    CalculatorButton(char label) {
+        this.button = new JButton(String.valueOf(label));
     }
 
-    public String getLabel() {
-        return label;
+    public char getLabel() {
+        return button.getText().charAt(0);
+    }
+
+    public void addActionListener(ActionListener actionListener) {
+            button.addActionListener(actionListener);
     }
 
 

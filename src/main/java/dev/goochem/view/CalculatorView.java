@@ -1,5 +1,7 @@
 package dev.goochem.view;
 
+import dev.goochem.model.Operator;
+
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
 import java.awt.*;
@@ -19,7 +21,7 @@ public class CalculatorView extends JFrame {
     private final JTextArea resultArea = new JTextArea(10, 10);
     public JButton calcButton;
     private static final Color BLUE_BACKGROUND_COLOR = new Color(6,57,112);
-    private static final Color GRAY_BACKGROUND_COLOR = new Color(238,238,228);
+    private static final Color GRAY_BACKGROUND_COLOR = new Color(163, 171, 184);
     private static final Font myFont = new Font("Consolas", Font.ITALIC, 30);
     public static final Set<CalculatorButton> DISPLAYABLE_BUTTONS = new HashSet<>();
     private final ArrayList<Integer> numbers = new ArrayList<>();
@@ -42,7 +44,13 @@ public class CalculatorView extends JFrame {
     private void loadFrame() {
         setTitle("Calculator");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setBounds(1400, 200, 720, 420);
+        setSize(720, 420);
+
+        // Calculate x, y position to open app in top right
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        int x = (int) (0.60 * screenSize.getWidth());
+        int y = (int) (0.10 * screenSize.getHeight());
+        setLocation(x, y);
 
         add(centerPanel, BorderLayout.CENTER);
         add(northPanel, BorderLayout.NORTH);
@@ -69,7 +77,7 @@ public class CalculatorView extends JFrame {
     // Load the northPanel aka the "screen"
     private void loadNorthPanel() {
         applyCommonPanelStyles(northPanel);
-//        northPanel.setBorder(BorderFactory.createLoweredBevelBorder());
+        northPanel.setBorder(BorderFactory.createLoweredBevelBorder());
         loadInputField();
         loadOutputField();
         northPanel.add(inputField, BorderLayout.CENTER);
@@ -98,24 +106,24 @@ public class CalculatorView extends JFrame {
     // TODO: Handle button press logic in controller
     private void initializeButtons() {
         for (CalculatorButton btn : CalculatorButton.values()) {
-            if (btn.getLabel().length() == 1) { // Add operators and digits to a Set<CalculatorButton>
+            if () { // Add operators and digits to a Set<CalculatorButton>
                 DISPLAYABLE_BUTTONS.add(btn);
             }
 
-            JButton semiTransparentButton = new JButton(btn.getLabel());
-            semiTransparentButton.setBackground(GRAY_BACKGROUND_COLOR);
-            if (btn == CalculatorButton.EQUALS) {
-                calcButton = semiTransparentButton;
+            JButton button = new JButton(btn.getLabel());
+            button.setBackground(GRAY_BACKGROUND_COLOR);
+            if (button == CalculatorButton.EQUALS) {
+                calcButton = button;
                 centerPanel.add(calcButton);
                 continue;
             }
 
-            semiTransparentButton.addActionListener(e -> {
+            button.addActionListener(e -> {
                 if (DISPLAYABLE_BUTTONS.contains(btn)) { // For digits and operators we update the inputField
                     updateInputField(btn);
                 }
             });
-            centerPanel.add(semiTransparentButton);
+            centerPanel.add(button);
         }
     }
 
@@ -128,13 +136,14 @@ public class CalculatorView extends JFrame {
         inputField.addKeyListener(new KeyAdapter() {
             @Override
             public void keyTyped(KeyEvent e) {
-                if (DISPLAYABLE_BUTTONS.stream().noneMatch(button -> button.getLabel().charAt(0) == e.getKeyChar())) {
+                if (DISPLAYABLE_BUTTONS.stream().noneMatch(button -> button.getLabel() == e.getKeyChar())) {
                     e.consume();
                 }
                 for (CalculatorButton btn : CalculatorButton.values()) {
-                    char btnLabel = btn.getLabel().charAt(0);
-                    if (CalculatorButton.EQUALS.getLabel().charAt(0) == e.getKeyChar()) {
+                    char btnLabel = btn.getLabel();
+                    if (CalculatorButton.EQUALS.getLabel() == e.getKeyChar()) {
                         calcButton.doClick();
+                        updateInputField(btn);
                         break;
                     } else if (btnLabel == e.getKeyChar()) {
                         updateInputField(btn);
@@ -159,18 +168,31 @@ public class CalculatorView extends JFrame {
         }
 
         String currentText = inputField.getText();
-        char buttonChar = btn.getLabel().charAt(0); // button to char
+        char buttonChar = btn.getLabel(); // button to char
         char lastInputtedChar = 0;
 
-        if (!currentText.isEmpty()) { // Collect last input
+        // Collect last input
+        if (!currentText.isEmpty()) {
             lastInputtedChar = currentText.charAt(currentText.length() - 1);
         }
 
-        if (Character.isDigit(buttonChar) || Character.isDigit(lastInputtedChar)) { // Prevents double operator input
+        // Prevents double operator input
+        if (Character.isDigit(buttonChar) || Character.isDigit(lastInputtedChar)) {
             inputField.setText(inputField.getText() + btn.getLabel());
         }
 
         inputField.requestFocus(); // reset focus for better typing experience
+    }
+
+    public char getLastInputtedChar() {
+        String currentText = inputField.getText();
+        char lastInputtedChar = 0;
+
+        // Collect last input
+        if (!currentText.isEmpty()) {
+            lastInputtedChar = currentText.charAt(currentText.length() - 1);
+        }
+        return lastInputtedChar;
     }
 
     // sets logoIcon, or null if the path was not found.
@@ -198,8 +220,10 @@ public class CalculatorView extends JFrame {
         outputField.setText(formattedSolution);
     }
 
-    public void addCalculationListener(ActionListener listenForCalcButton) {
-        calcButton.addActionListener(listenForCalcButton);
+    public void addCalculationListener(ActionListener listener) {
+        for (CalculatorButton button : CalculatorButton.values()) {
+            button.addActionListener(listener);
+        }
     }
 
     public void addResultToHistory(String result) {
@@ -213,6 +237,8 @@ public class CalculatorView extends JFrame {
     public void setDisplayingResult(boolean input) {
         displayingResult = input;
     }
+
+
 
     public void updateView() {
 

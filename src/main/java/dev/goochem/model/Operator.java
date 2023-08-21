@@ -2,18 +2,22 @@ package dev.goochem.model;
 
 public enum Operator implements Comparable<Operator> {
 
-    ADDITION("+", 0),
-    SUBTRACTION("-", 0),
-    DIVISION("/", 5),
-    MULTIPLICATION("*", 5);
+    ADDITION('+', 0),
+    SUBTRACTION('-', 0),
+    DIVISION('/', 5),
+    MULTIPLICATION('*', 5);
 
 
     final int precedence;
-    final String symbol;
+    final char symbol;
 
-    Operator(String symbol, int precedence) {
+    Operator(char symbol, int precedence) {
         this.symbol = symbol;
         this.precedence = precedence;
+    }
+
+    public char getSymbol() {
+        return symbol;
     }
 
     public int comparePrecedence(Operator operator) {

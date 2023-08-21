@@ -5,7 +5,7 @@ import java.util.*;
 public class CalculatorModel {
 
     private double calculationValue;
-    final static Map<String, Operator> OPS = new HashMap<>();
+    final static Map<Character, Operator> OPS = new HashMap<>();
 
     static {
         // Fill map with all operators
