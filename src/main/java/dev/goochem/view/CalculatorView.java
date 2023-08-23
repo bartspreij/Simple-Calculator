@@ -1,11 +1,8 @@
 package dev.goochem.view;
 
-import dev.goochem.model.Operator;
-
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
 import java.awt.*;
-import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.text.DecimalFormat;
@@ -71,7 +68,6 @@ public class CalculatorView extends JFrame {
     // Load the centerPanel
     private void loadCenterPanel() {
         applyCommonPanelStyles(centerPanel);
-        initializeButtons();
     }
 
     // Load the northPanel aka the "screen"
@@ -102,29 +98,10 @@ public class CalculatorView extends JFrame {
         panel.setBorder(BorderFactory.createEmptyBorder(5, 10, 5, 10));
     }
 
-    // Initializes the buttons and adds an event listener to them for the center panel
-    // TODO: Handle button press logic in controller
-    private void initializeButtons() {
-        for (CalculatorButton btn : CalculatorButton.values()) {
-            if () { // Add operators and digits to a Set<CalculatorButton>
-                DISPLAYABLE_BUTTONS.add(btn);
-            }
-
-            JButton button = new JButton(btn.getLabel());
-            button.setBackground(GRAY_BACKGROUND_COLOR);
-            if (button == CalculatorButton.EQUALS) {
-                calcButton = button;
-                centerPanel.add(calcButton);
-                continue;
-            }
-
-            button.addActionListener(e -> {
-                if (DISPLAYABLE_BUTTONS.contains(btn)) { // For digits and operators we update the inputField
-                    updateInputField(btn);
-                }
-            });
-            centerPanel.add(button);
-        }
+    // Adds button to panel
+    public void addButtonToCenterPanel(JButton button) {
+        button.setBackground(GRAY_BACKGROUND_COLOR);
+        centerPanel.add(button);
     }
 
     // Loads everything for the input area TODO: fix enter and backspace logic a
@@ -167,16 +144,10 @@ public class CalculatorView extends JFrame {
             setDisplayingResult(false);
         }
 
-        String currentText = inputField.getText();
+        // Compares chars to prevent double operator input
         char buttonChar = btn.getLabel(); // button to char
-        char lastInputtedChar = 0;
+        char lastInputtedChar = getLastInputtedChar();
 
-        // Collect last input
-        if (!currentText.isEmpty()) {
-            lastInputtedChar = currentText.charAt(currentText.length() - 1);
-        }
-
-        // Prevents double operator input
         if (Character.isDigit(buttonChar) || Character.isDigit(lastInputtedChar)) {
             inputField.setText(inputField.getText() + btn.getLabel());
         }
@@ -218,12 +189,6 @@ public class CalculatorView extends JFrame {
         String formattedSolution = decimalFormat.format(solution);
         addResultToHistory(formattedSolution);
         outputField.setText(formattedSolution);
-    }
-
-    public void addCalculationListener(ActionListener listener) {
-        for (CalculatorButton button : CalculatorButton.values()) {
-            button.addActionListener(listener);
-        }
     }
 
     public void addResultToHistory(String result) {

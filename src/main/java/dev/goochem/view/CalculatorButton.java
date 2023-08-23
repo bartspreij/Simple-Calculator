@@ -1,7 +1,6 @@
 package dev.goochem.view;
 
 import javax.swing.*;
-import java.awt.event.ActionListener;
 
 public enum CalculatorButton {
     SEVEN('7'),
@@ -35,9 +34,10 @@ public enum CalculatorButton {
         return button.getText().charAt(0);
     }
 
-    public void addActionListener(ActionListener actionListener) {
-            button.addActionListener(actionListener);
+    public JButton getJButton() {
+        return this.button;
     }
+
 
 
 

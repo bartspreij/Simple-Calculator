@@ -4,214 +4,73 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb145a75-94b0-4aed-bd02-24305f267dce" name="Changes" comment="">
+    <list default="true" id="de3655d9-285b-4eb8-974d-207f48b2b295" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/goochem/controller/CalculatorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/goochem/controller/CalculatorController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/goochem/model/CalculatorModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/goochem/model/CalculatorModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/goochem/model/Operator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/goochem/model/Operator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/goochem/model/ShuntingYard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/goochem/model/ShuntingYard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/goochem/view/CalculatorButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/goochem/view/CalculatorButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/goochem/view/CalculatorView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/goochem/view/CalculatorView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/goochem/controller/CalculatorController$CalculateListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/goochem/controller/CalculatorController$CalculateListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/goochem/controller/CalculatorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/goochem/controller/CalculatorController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/goochem/model/CalculatorModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/goochem/model/CalculatorModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/goochem/model/Operator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/goochem/model/Operator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/goochem/model/ShuntingYard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/goochem/model/ShuntingYard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/goochem/view/CalculatorButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/goochem/view/CalculatorButton.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/goochem/view/CalculatorView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/goochem/view/CalculatorView$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/goochem/view/CalculatorView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/goochem/view/CalculatorView.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CompilerWorkspaceConfiguration">
-    <option name="CLEAR_OUTPUT_DIRECTORY" value="false" />
-  </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="64982" />
-    <option name="gitIntegration" value="true" />
-    <option name="naggedAbout" value="1" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Enum" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="FindBugs-IDEA-Workspace">
-    <analyzeAfterCompile>true</analyzeAfterCompile>
-    <toolWindowToFront>false</toolWindowToFront>
+    <option name="totalTimeSeconds" value="5891" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7
-}</component>
-  <component name="ProjectId" id="2TmwlX6hVDWBKoDUFpzckylFEYm" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": -1
+}]]></component>
+  <component name="ProjectId" id="2UNoL0p46TkOOTOScqjCsmD6Pq0" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
-    <option name="abbreviatePackageNames" value="true" />
-    <option name="autoscrollFromSource" value="true" />
-    <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="false" />
-    <option name="showModules" value="false" />
-    <option name="sortByType" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Development/Projects/simplecalculator&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.import&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="dev.goochem.model" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Application.SimpleCalculatorApp">
-    <configuration name="SimpleCalculatorApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="17" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="dev.goochem.SimpleCalculatorApp" />
-      <module name="simplecalculator" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dev.goochem.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="ALTERNATIVE_JRE_PATH" value="17" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <module name="simplecalculator" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CalculatorControllerTest.testTokenizeExpression" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="simplecalculator" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dev.goochem.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dev.goochem.controller" />
-      <option name="MAIN_CLASS_NAME" value="dev.goochem.controller.CalculatorControllerTest" />
-      <option name="METHOD_NAME" value="testTokenizeExpression" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CalculatorModelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="simplecalculator" />
-      <option name="PACKAGE_NAME" value="dev.goochem.model" />
-      <option name="MAIN_CLASS_NAME" value="dev.goochem.model.CalculatorModelTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ShuntingYardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="simplecalculator" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dev.goochem.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dev.goochem.model" />
-      <option name="MAIN_CLASS_NAME" value="dev.goochem.model.ShuntingYardTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ShuntingYardTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="simplecalculator" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dev.goochem.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dev.goochem.model" />
-      <option name="MAIN_CLASS_NAME" value="dev.goochem.model.ShuntingYardTest" />
-      <option name="METHOD_NAME" value="test1" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="TestNG">
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.SimpleCalculatorApp" />
-        <item itemvalue="JUnit.ShuntingYardTest" />
-        <item itemvalue="JUnit.ShuntingYardTest.test1" />
-        <item itemvalue="JUnit.CalculatorControllerTest.testTokenizeExpression" />
-        <item itemvalue="JUnit.CalculatorModelTest" />
-      </list>
-    </recent_temporary>
-  </component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fb145a75-94b0-4aed-bd02-24305f267dce" name="Changes" comment="" />
-      <created>1691744639648</created>
+      <changelist id="de3655d9-285b-4eb8-974d-207f48b2b295" name="Changes" comment="" />
+      <created>1692789342052</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1691744639648</updated>
+      <updated>1692789342052</updated>
     </task>
     <servers />
   </component>
   <component name="XDebuggerManager">
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="inputField" />
-      </configuration>
-    </watches-manager>
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/dev/goochem/controller/CalculatorController.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

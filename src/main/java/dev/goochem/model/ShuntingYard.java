@@ -16,7 +16,7 @@ public class ShuntingYard {
     static {
         // Fill map with all operators
         for (Operator operator : Operator.values()) {
-            OPS.put(operator.symbol, operator);
+            OPS.put(String.valueOf(operator.symbol), operator);
         }
     }
 

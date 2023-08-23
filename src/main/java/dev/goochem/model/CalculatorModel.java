@@ -18,8 +18,8 @@ public class CalculatorModel {
         Stack<Double> stack = new Stack<>();
 
         for (String token : rpnTokens) {
-            if (OPS.containsKey(token)) { // Token is operator, so we pop the last two numbers and apply the operator to them
-                Operator operator = OPS.get(token);
+            if (OPS.containsKey(token.charAt(0))) { // Token is operator, so we pop the last two numbers and apply the operator to them
+                Operator operator = OPS.get(token.charAt(0));
 
                 double secondNumber = stack.pop();
                 double firstNumber = stack.pop();

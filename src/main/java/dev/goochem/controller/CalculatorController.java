@@ -5,6 +5,7 @@ import dev.goochem.model.Operator;
 import dev.goochem.view.CalculatorButton;
 import dev.goochem.view.CalculatorView;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -22,20 +23,38 @@ public class CalculatorController {
         this.model = model;
         this.view = view;
 
-        this.view.addCalculationListener(new CalculateListener());
+        initializeViewButtonsWithCalculateListener();
     }
 
     class CalculateListener implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            CalculatorButton button = (CalculatorButton) e.getSource();
-            handleButtonPress(button);
+            JButton button = (JButton) e.getSource();
+            CalculatorButton calculatorButton = findCalculatorButtonByLabel(button);
+            if (calculatorButton != null) {
+                handleButtonPress(calculatorButton);
+            }
+
         }
     }
 
-    public void handleButtonPress(CalculatorButton btn) {
-            switch (btn) {
+    // Initializes all the calculator buttons and adds an ActionListener, then adds it to the view
+    private void initializeViewButtonsWithCalculateListener() {
+        for (CalculatorButton button : CalculatorButton.values()) {
+            JButton btn = button.getJButton();
+            btn.addActionListener(new CalculateListener());
+            view.addButtonToCenterPanel(btn);
+        }
+    }
+
+    public void handleButtonPress(CalculatorButton button) {
+            if (isOperator(button.getLabel()) || Character.isDigit(button.getLabel())) {
+                view.updateInputField(button);
+                return;
+            }
+
+            switch (button) {
                 case EQUALS -> handleEqualsPress();
                 case AC -> handleAllClearPress();
                 case DELETE -> handleDeletePress();
@@ -82,5 +101,14 @@ public class CalculatorController {
             }
         }
         return false;
+    }
+
+    private CalculatorButton findCalculatorButtonByLabel(JButton jButton) {
+        for (CalculatorButton btn : CalculatorButton.values()) {
+            if (btn.getJButton() == jButton) {
+                return btn;
+            }
+        }
+        return null;
     }
 }
