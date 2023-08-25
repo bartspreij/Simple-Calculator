@@ -5,20 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de3655d9-285b-4eb8-974d-207f48b2b295" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/goochem/SimpleCalculatorApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/goochem/SimpleCalculatorApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/goochem/controller/CalculatorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/goochem/controller/CalculatorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/goochem/model/CalculatorModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/goochem/model/CalculatorModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/goochem/model/ShuntingYard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/goochem/model/ShuntingYard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/goochem/view/CalculatorButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/goochem/view/CalculatorButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/goochem/view/CalculatorView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/goochem/view/CalculatorView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/goochem/controller/CalculatorController$CalculateListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/goochem/controller/CalculatorController$CalculateListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dev/goochem/model/CalculatorModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dev/goochem/model/CalculatorModelTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/goochem/controller/CalculatorController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/goochem/controller/CalculatorController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/goochem/controller/CalculatorController$CalculateListener.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/dev/goochem/controller/CalculatorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/goochem/controller/CalculatorController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/goochem/model/CalculatorModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/goochem/model/CalculatorModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/goochem/model/Operator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/goochem/model/Operator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/dev/goochem/model/ShuntingYard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/goochem/model/ShuntingYard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/goochem/view/CalculatorButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/goochem/view/CalculatorButton.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dev/goochem/view/CalculatorView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/goochem/view/CalculatorView$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dev/goochem/view/CalculatorView$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/dev/goochem/view/CalculatorView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dev/goochem/view/CalculatorView.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,15 +25,24 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="5891" />
+    <option name="totalTimeSeconds" value="21519" />
+    <option name="gitIntegration" value="true" />
+    <option name="naggedAbout" value="1" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": -1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: -1
+}</component>
   <component name="ProjectId" id="2UNoL0p46TkOOTOScqjCsmD6Pq0" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -44,13 +51,81 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager" selected="Application.SimpleCalculatorApp">
+    <configuration name="SimpleCalculatorApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dev.goochem.SimpleCalculatorApp" />
+      <module name="simplecalculator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dev.goochem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalculatorControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="simplecalculator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dev.goochem.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dev.goochem.controller" />
+      <option name="MAIN_CLASS_NAME" value="dev.goochem.controller.CalculatorControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalculatorModelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="simplecalculator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dev.goochem.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dev.goochem.model" />
+      <option name="MAIN_CLASS_NAME" value="dev.goochem.model.CalculatorModelTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShuntingYardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="simplecalculator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dev.goochem.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dev.goochem.model" />
+      <option name="MAIN_CLASS_NAME" value="dev.goochem.model.ShuntingYardTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SimpleCalculatorApp" />
+        <item itemvalue="JUnit.CalculatorModelTest" />
+        <item itemvalue="JUnit.CalculatorControllerTest" />
+        <item itemvalue="JUnit.ShuntingYardTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -67,8 +142,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/dev/goochem/controller/CalculatorController.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="3" />
+          <line>55</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

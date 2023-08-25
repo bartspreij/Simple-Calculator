@@ -8,6 +8,8 @@ import dev.goochem.view.CalculatorView;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -24,41 +26,59 @@ public class CalculatorController {
         this.view = view;
 
         initializeViewButtonsWithCalculateListener();
-    }
 
-    class CalculateListener implements ActionListener {
+        view.addKeyPressListener(new KeyAdapter() {
+             @Override
+             public void keyTyped(KeyEvent e) {
+                 handleButtonPressOrKeyClick(e.getKeyChar());
+             }
+        });
 
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            JButton button = (JButton) e.getSource();
-            CalculatorButton calculatorButton = findCalculatorButtonByLabel(button);
-            if (calculatorButton != null) {
-                handleButtonPress(calculatorButton);
-            }
-
-        }
     }
 
     // Initializes all the calculator buttons and adds an ActionListener, then adds it to the view
     private void initializeViewButtonsWithCalculateListener() {
-        for (CalculatorButton button : CalculatorButton.values()) {
-            JButton btn = button.getJButton();
-            btn.addActionListener(new CalculateListener());
+        for (CalculatorButton calcButton : CalculatorButton.values()) {
+            JButton btn = calcButton.getJButton();
+            btn.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    char keyChar = calcButton.getSymbol();
+                    handleButtonPressOrKeyClick(keyChar);
+                }
+            });
             view.addButtonToCenterPanel(btn);
         }
     }
 
-    public void handleButtonPress(CalculatorButton button) {
-            if (isOperator(button.getLabel()) || Character.isDigit(button.getLabel())) {
-                view.updateInputField(button);
-                return;
-            }
+    // Handles basically all logic when a button is pressed or a key is typed this decides what happens
+    public void handleButtonPressOrKeyClick(char e) {
+        CalculatorButton button = charToCalculatorButton(e);
 
-            switch (button) {
-                case EQUALS -> handleEqualsPress();
-                case AC -> handleAllClearPress();
-                case DELETE -> handleDeletePress();
+        if (button == null) {
+            return;
+        }
+
+        // In case of a number or operator we just update the view and return
+        if (isOperator(button.getSymbol()) || Character.isDigit(button.getSymbol())) {
+
+            // In case of displaying a result but an operator is inputted we consider it as pressed CalculatorButton.ANS
+            if (view.isDisplayingResult() && isOperator(button.getSymbol())) {
+                view.setInputFieldText(String.valueOf(model.getCalculationValue() + button.getSymbol()));
+                view.setDisplayingResult(false);
+
+            } else {
+                view.updateInputField(button);
             }
+            return;
+        }
+
+        switch (button) {
+            case EQUALS -> handleEqualsPress();
+            case AC -> handleAllClearPress();
+            case DELETE -> handleDeletePress();
+            case ANS -> handleAnsPress();
+        }
     }
 
     private void handleEqualsPress() {
@@ -72,17 +92,23 @@ public class CalculatorController {
         model.evaluateExpression(RPN);
         view.setCalcSolution(model.getCalculationValue());
         view.setDisplayingResult(true);
+        view.resetFocus();
     }
 
     private void handleAllClearPress() {
-
+        view.clearInputField();
     }
 
-    private void handleDeletePress () {
-
+    private void handleDeletePress() {
+        view.deleteLastInputFromInputField();
     }
 
-    private List<String> tokenizeExpression(String expression) {
+    private void handleAnsPress() {
+        view.clearInputField();
+        view.setInputFieldText(String.valueOf(model.getCalculationValue()));
+    }
+
+    public List<String> tokenizeExpression(String expression) {
         List<String> tokens = new ArrayList<>();
         String regex = "\\d+|[\\-+*/]";
         Pattern pattern = Pattern.compile(regex);
@@ -103,10 +129,14 @@ public class CalculatorController {
         return false;
     }
 
-    private CalculatorButton findCalculatorButtonByLabel(JButton jButton) {
-        for (CalculatorButton btn : CalculatorButton.values()) {
-            if (btn.getJButton() == jButton) {
-                return btn;
+    private CalculatorButton charToCalculatorButton(char character) {
+        if (character == '\n') { // Makes typing enter the same as pressing equals
+            return CalculatorButton.EQUALS;
+        }
+
+        for (CalculatorButton calcButton : CalculatorButton.values()) {
+            if (calcButton.getSymbol() == character) {
+                return calcButton;
             }
         }
         return null;

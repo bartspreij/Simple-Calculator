@@ -48,7 +48,6 @@ public class ShuntingYard {
         while(!stack.isEmpty()) {
             output.add(stack.pop());
         }
-
         return output;
     }
 }

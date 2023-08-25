@@ -16,29 +16,25 @@ public class CalculatorModelTest {
 
     @Test
     public void testAddition() {
-        calculator.add(3, 5);
-        int result = calculator.getCalculationValue();
+        double result = calculator.add(3, 5);
         assertEquals(8, result);
     }
 
     @Test
     public void testSubtraction() {
-        calculator.subtract(10, 4);
-        int result = calculator.getCalculationValue();
+        double result = calculator.subtract(10, 4);
         assertEquals(6, result);
     }
 
     @Test
     public void testMultiplication() {
-        calculator.multiply(45, 3);
-        int result = calculator.getCalculationValue();
+        double result = calculator.multiply(45, 3);
         assertEquals(135, result);
     }
 
     @Test
     public void testDivision() {
-        calculator.divide(9, 3);
-        int result = calculator.getCalculationValue();
+        double result = calculator.divide(9, 3);
         assertEquals(3, result);
         }
     }

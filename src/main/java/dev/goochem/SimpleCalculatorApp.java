@@ -12,6 +12,5 @@ public class SimpleCalculatorApp {
         CalculatorController controller = new CalculatorController(model, view);
 
         view.setVisible(true);
-
     }
 }

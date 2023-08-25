@@ -4,7 +4,6 @@ import javax.swing.*;
 import javax.swing.border.TitledBorder;
 import java.awt.*;
 import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -16,7 +15,6 @@ public class CalculatorView extends JFrame {
     private final JTextField inputField = new JTextField(15);
     private final JTextField outputField = new JTextField(5);
     private final JTextArea resultArea = new JTextArea(10, 10);
-    public JButton calcButton;
     private static final Color BLUE_BACKGROUND_COLOR = new Color(6,57,112);
     private static final Color GRAY_BACKGROUND_COLOR = new Color(163, 171, 184);
     private static final Font myFont = new Font("Consolas", Font.ITALIC, 30);
@@ -29,7 +27,6 @@ public class CalculatorView extends JFrame {
         this.centerPanel = new JPanel(new GridLayout(4, 5, 2, 2));
         this.northPanel = new JPanel(new BorderLayout());
         this.eastPanel = new JPanel(new BorderLayout());
-        this.calcButton = new JButton();
 
         loadPanels();
         loadLogo();
@@ -55,7 +52,6 @@ public class CalculatorView extends JFrame {
 
         setResizable(false);
         setAlwaysOnTop(true);
-        pack();
     }
 
     // Loads all the panels, so they can be placed on the BorderLayout
@@ -78,7 +74,6 @@ public class CalculatorView extends JFrame {
         loadOutputField();
         northPanel.add(inputField, BorderLayout.CENTER);
         northPanel.add(outputField, BorderLayout.EAST);
-
     }
 
     // Load the eastPanel which shows calculations history
@@ -89,7 +84,7 @@ public class CalculatorView extends JFrame {
         title.setTitleColor(Color.WHITE);
         eastPanel.setBorder(title);
         loadResultArea();
-        eastPanel.add(resultArea);
+        eastPanel.add(new JScrollPane(resultArea));
     }
 
     // Apply common panel styles
@@ -104,31 +99,17 @@ public class CalculatorView extends JFrame {
         centerPanel.add(button);
     }
 
+    public void addKeyPressListener(KeyAdapter listener) {
+        inputField.addKeyListener(listener);
+    }
+
     // Loads everything for the input area TODO: fix enter and backspace logic a
     private void loadInputField() {
         inputField.setBackground(GRAY_BACKGROUND_COLOR);
         inputField.setCaretColor(GRAY_BACKGROUND_COLOR); // make cursor invisible
         inputField.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
         inputField.setFont(myFont);
-        inputField.addKeyListener(new KeyAdapter() {
-            @Override
-            public void keyTyped(KeyEvent e) {
-                if (DISPLAYABLE_BUTTONS.stream().noneMatch(button -> button.getLabel() == e.getKeyChar())) {
-                    e.consume();
-                }
-                for (CalculatorButton btn : CalculatorButton.values()) {
-                    char btnLabel = btn.getLabel();
-                    if (CalculatorButton.EQUALS.getLabel() == e.getKeyChar()) {
-                        calcButton.doClick();
-                        updateInputField(btn);
-                        break;
-                    } else if (btnLabel == e.getKeyChar()) {
-                        updateInputField(btn);
-                        e.consume();
-                    }
-                }
-            }
-        });
+        inputField.setEditable(false);
     }
 
     private void loadOutputField() {
@@ -140,19 +121,17 @@ public class CalculatorView extends JFrame {
 
     public void updateInputField(CalculatorButton btn) {
         if (displayingResult) { // Clear inputField if we calculated something
-            inputField.setText("");
+            clearInputField();
             setDisplayingResult(false);
         }
 
         // Compares chars to prevent double operator input
-        char buttonChar = btn.getLabel(); // button to char
+        char buttonChar = btn.getSymbol(); // button to char
         char lastInputtedChar = getLastInputtedChar();
 
         if (Character.isDigit(buttonChar) || Character.isDigit(lastInputtedChar)) {
-            inputField.setText(inputField.getText() + btn.getLabel());
+            inputField.setText(inputField.getText() + btn.getSymbol());
         }
-
-        inputField.requestFocus(); // reset focus for better typing experience
     }
 
     public char getLastInputtedChar() {
@@ -195,17 +174,30 @@ public class CalculatorView extends JFrame {
         resultArea.append(inputField.getText() + "= " + result + "\n");
     }
 
-    void displayErrorMessage(String errorMessage) {
-        JOptionPane.showMessageDialog(this, errorMessage);
-    }
-
     public void setDisplayingResult(boolean input) {
         displayingResult = input;
     }
 
+    public void clearInputField() {
+        inputField.setText("");
+    }
 
+    // Removes last input from input field i.e. \\b
+    public void deleteLastInputFromInputField() {
+        if (!inputField.getText().isEmpty()) {
+            inputField.setText(inputField.getText().substring(0, inputField.getText ().length() - 1));
+        }
+    }
 
-    public void updateView() {
+    public void resetFocus() {
+        inputField.requestFocus(); // reset focus for better typing experience
+    }
 
+    public boolean isDisplayingResult() {
+        return displayingResult;
+    }
+
+    public void setInputFieldText(String input) {
+        inputField.setText(input);
     }
 }
